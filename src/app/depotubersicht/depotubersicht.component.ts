@@ -99,43 +99,6 @@ export class DepotubersichtComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  //   this.chart = new Chart("canvas", {
-  //     type: 'line',
-  //     data: {
-  //         labels: this.date,
-  //         datasets: [{
-  //             data: this.chartToShow,
-  //             fill: false,
-  //             borderColor: [
-  //                 'rgba(255,99,132,1)',
-  //             ],
-  //             borderWidth: 1
-  //         }]
-  //     },
-  //     options: {
-  //         scales: {
-  //             yAxes: [{
-  //                 ticks: {
-  //                     beginAtZero:true
-  //                 },
-  //                 gridLines: {
-  //                   drawBorder: false,
-  //                 },
-            
-  //             }],
-  //             xAxes: [{
-  //               ticks: {
-  //               autoSkip:true,
-  //               maxTicksLimit:6
-  //               },
-  //               gridLines: {
-  //                 display: false,
-  //               },
-  //            }]
-        
-  //         }
-  //     }
-  // });
   };
   
   chartDataHandler = (id) =>{
