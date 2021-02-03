@@ -1,20 +1,101 @@
 .investments-container{
+    margin-top:1rem;
     &__item{
+        margin-bottom: 1rem;
         display:flex;
         justify-content: space-between;
-        border-bottom: 1px solid rgb(75, 74, 74);
+        border-bottom: 1px solid #ebebeb;
+        height:4rem;
+        font-size: 1.6rem;
+        &-name{
+            cursor:pointer;
+            p{
+                font-size: 1rem;
+                color:#515151
+
+            }
+        }
         &-info{
             display:flex;
             align-items: center;
             .investments-container__item-value{
                 padding-left: 1rem;
+                .item-value__add{
+                    font-size: 1rem;
+                    color:#515151
+                }
             }
             .investments-container__item-percentage{
                 padding-left: 1rem;
+                .item-percentage{
+                    color:rgb(3, 85, 3);
+                }
+                .item-percentage__add{
+                    font-size: 1rem;
+                }
+                .green{
+                    color:rgb(30, 224, 30);
+                }
             }
             .investments-container__item-arrow{
                 padding-left: 1rem;
+                color:#515151;
+                padding-right: 1rem;
             }
         };
     }
+}
+.general-info{
+    width: 100%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.6rem 2rem 1.6rem 2rem;
+    background:#ebebeb;
+    .add-text{
+        font-size: 0.8rem;
+    }
+    .main-text{
+        font-size: 2rem;
+    }
+    .profit-value{
+        font-size: 1.6rem;
+    }
+    .green{
+        color:rgb(22, 172, 22)
+    }
+    .orange{
+        color:rgb(226, 132, 8)
+    }
+    &__global{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .depot{
+            margin-bottom: 2rem;
+        }
+    }
+    &__local{
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .mitel{
+            margin-bottom: 2rem;
+        }
+    }
+    
+}
+
+@media (min-width: 40rem){
+    .depotub{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+    .investments-container{
+        width: 60%;
+    }
+    .general-info{
+        width: 60%;
+    }
+}
 }

@@ -36,6 +36,7 @@ export class DepotubersichtComponent implements OnInit {
  
   public lineChartLabels: Label[] = this.date;
   public lineChartOptions = {
+    responsive: true,
     legend: {
       display: false
   },
@@ -46,7 +47,6 @@ export class DepotubersichtComponent implements OnInit {
          }
       }
   },
-    responsive: true,
     scales: {
       // We use this empty structure as a placeholder for dynamic theming.
       xAxes: [{
@@ -85,12 +85,8 @@ export class DepotubersichtComponent implements OnInit {
   };
   public lineChartColors: Color[] = [
     { // grey
-      backgroundColor: 'rgba(148,159,177,0.2)',
-      borderColor: 'rgba(148,159,177,1)',
-      pointBackgroundColor: 'rgba(148,159,177,1)',
-      pointBorderColor: '#fff',
-      pointHoverBackgroundColor: '#fff',
-      pointHoverBorderColor: 'rgba(148,159,177,0.8)'
+      backgroundColor: 'rgb(226, 132, 8)',
+      borderColor: 'rgb(226, 132, 8)',
     },
   ];
   public lineChartLegend = true;
@@ -143,7 +139,6 @@ export class DepotubersichtComponent implements OnInit {
   };
   
   chartDataHandler = (id) =>{
-    console.log(id);
     this.lineChartData[0].data=id;
   }
 }

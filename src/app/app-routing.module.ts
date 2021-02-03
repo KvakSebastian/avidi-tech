@@ -9,6 +9,11 @@ const routes: Routes = [
         import('./depotubersicht/depotubersicht.module').then((m) => m.DepotubersichtModule),
   },
   {
+    path: 'depotubersicht-info',
+    loadChildren: () =>
+        import('./depotubersicht-info/depotubersicht-info.module').then((m) => m.DepotubersichtInfoModule),
+  },
+  {
     path: 'marktubersicht',
     loadChildren: () =>
         import('./marktubersicht/marktubersicht.module').then((m) => m.MarktubersichtModule),

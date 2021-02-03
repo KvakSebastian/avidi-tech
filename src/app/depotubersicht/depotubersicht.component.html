@@ -1,5 +1,6 @@
+<div class="depotub">
 <div style="display: block;">
-    <canvas baseChart width="400" height="400"
+    <canvas baseChart width="1200px" height="800px"
                 [datasets]="lineChartData"
                 [labels]="lineChartLabels"
                 [options]="lineChartOptions"
@@ -9,28 +10,51 @@
                 [plugins]="lineChartPlugins"
                ></canvas>
     </div>
-
+<div class="general-info">
+    <div class="general-info__global">
+            <div class="depot">
+                <p class="add-text orange">DEPOT</p>
+                <p class="main-text"><strong> 115.584,25 $</strong></p>
+            </div>
+            <div class="gesamit">
+                <p class="add-text orange">GESAMIT</p>
+                <p class="profit-value"><strong>+ 47.235,14 $</strong></p>
+                <p class="green">+ 23%</p>
+            </div>
+    </div>  
+    <div class="general-info__local">
+        <div class="general-info__local-container">
+            <div class="mitel">
+                <p class="add-text orange">LIQUIDE MITTEL</p>
+                <p class="main-text"><strong>7.584,25 $</strong></p></div>
+            <div class="heute">
+                <p class="add-text orange">HEUTE</p>
+                <p class="profit-value"><strong>+ 7,235,14 $</strong></p>
+                <p class="green">+5%</p></div>
+        </div>
+    </div>
+</div>
 
 <div class="investments-container" >
-    <div class="investments-container__item" *ngFor="let list of chartData" (click)="chartDataHandler(list)">
-        <div class="investments-container__item-name">
+    <div class="investments-container__item" *ngFor="let list of chartData">
+        <div class="investments-container__item-name" (click)="chartDataHandler(list)">
             <h4>Continental AG</h4>
-            <h5>10 STck</h5>
+            <p>10 STck</p>
         </div>
         <div class="investments-container__item-info">
             <div class="investments-container__item-value">
-                <p class="item-value">86.86</p>
+                <p class="item-value"><strong>81.76</strong></p>
                 <p class="item-value__add">12:13:11</p>
             </div>
             <div class="investments-container__item-percentage">
-                <p class="item-percentage">+0.55%</p>
-                <p class="item-vpercentage__add">+0.23%</p>
+                <p class="item-percentage"><strong>+0.55%</strong></p>
+                <p class="item-percentage__add">+0.23%</p>
             </div>
-            <div class="investments-container__item-arrow">
+            <div class="investments-container__item-arrow" [routerLink]="['/depotubersicht-info']">
                 >
             </div>
         </div>
     </div>
     
 
-</div>
+</div></div>
