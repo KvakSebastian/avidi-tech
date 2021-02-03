@@ -2,18 +2,26 @@
 <div class='nav-menu'>
   <button
   class="redirect-button"
-  [routerLink]="['./depotubersicht']">
+  [routerLink]="['./depotubersicht']"
+  [routerLinkActive]="'active'"
+  >
   Depotubersicht
   </button>
   <button
   class="redirect-button"
-  [routerLink]="['./watchlist']">
+  [routerLink]="['./watchlist']"
+  [routerLinkActive]="'active'"
+  >
   Watchlist
   </button>
   <button
   class="redirect-button"
-  [routerLink]="['./marktubersicht']">
+  [routerLink]="['./marktubersicht']"
+  [routerLinkActive]="'active'"
+  >
   Marktubersicht
   </button>
 </div>
-<router-outlet></router-outlet>
+<div class ="wrapper" [@fadeAnimation]="o.isActivated ? o.activatedRoute : ''">
+<router-outlet #o="outlet"></router-outlet>
+</div>
