@@ -1,0 +1,13 @@
+.nav-menu{
+    border-bottom:0.1rem solid rgb(141, 140, 140);
+    .redirect-button{
+        padding:1rem 1rem;
+        background-color: white;
+        border:0rem;
+        color:rgba(41, 41, 41, 1);
+    }
+    .redirect-button:hover{
+        border-bottom: 2px solid #e28103;
+    }
+
+}

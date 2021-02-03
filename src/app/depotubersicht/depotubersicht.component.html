@@ -1,0 +1,36 @@
+<div style="display: block;">
+    <canvas baseChart width="400" height="400"
+                [datasets]="lineChartData"
+                [labels]="lineChartLabels"
+                [options]="lineChartOptions"
+                [colors]="lineChartColors"
+                [legend]="lineChartLegend"
+                [chartType]="lineChartType"
+                [plugins]="lineChartPlugins"
+               ></canvas>
+    </div>
+
+
+<div class="investments-container" >
+    <div class="investments-container__item" *ngFor="let list of chartData" (click)="chartDataHandler(list)">
+        <div class="investments-container__item-name">
+            <h4>Continental AG</h4>
+            <h5>10 STck</h5>
+        </div>
+        <div class="investments-container__item-info">
+            <div class="investments-container__item-value">
+                <p class="item-value">86.86</p>
+                <p class="item-value__add">12:13:11</p>
+            </div>
+            <div class="investments-container__item-percentage">
+                <p class="item-percentage">+0.55%</p>
+                <p class="item-vpercentage__add">+0.23%</p>
+            </div>
+            <div class="investments-container__item-arrow">
+                >
+            </div>
+        </div>
+    </div>
+    
+
+</div>
