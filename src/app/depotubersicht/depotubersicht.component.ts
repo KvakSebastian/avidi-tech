@@ -8,22 +8,22 @@ import { Color, BaseChartDirective, Label } from 'ng2-charts';
   styleUrls: ['./depotubersicht.component.scss']
 })
 export class DepotubersichtComponent implements OnInit {
-  date=['Jan 20','Feb 20','Mar 20', 'Apr 20', 'May 20','Jun 20','Lul 20','Aug 20','Sep 20','Nov 20','Oct 20','Dec 20',];
+  date = ['Jan 20', 'Feb 20', 'Mar 20', 'Apr 20', 'May 20', 'Jun 20', 'Lul 20', 'Aug 20', 'Sep 20', 'Nov 20', 'Oct 20', 'Dec 20', ];
   chartData =  [
-    [1250,1235,1238,2258,1578,1290,2450,1650,1558,1348,2045,1000],
-    [2450,1650,1558,2258,1578,1290,2450,1650,1558,1348,2045,1500],
-    [1250,1235,1238,2258,1578,1290,2450,1650,1558,1348,2045,1800],
-    [1250,1235,1250,1235,1238,1290,2450,1650,1558,2450,1650,1558],
-    [1250,1235,1238,2258,1578,1290,2450,1650,1558,1250,1235,1238],
-    [1250,1235,1238,2258,1578,1290,2450,1250,1235,1238,1000,2345],
-    [1250,1235,1238,2258,1250,1235,1238,1650,1558,1348,2045,2135],
-    [1250,1235,1238,2258,1578,1290,2450,1650,1558,1348,2045,1000],
-    [2450,1650,1558,1235,1238,1290,2450,1650,1558,1348,2045,2314]
+    [1250, 1235, 1238, 2258, 1578, 1290, 2450, 1650, 1558, 1348, 2045, 1000],
+    [2450, 1650, 1558, 2258, 1578, 1290, 2450, 1650, 1558, 1348, 2045, 1500],
+    [1250, 1235, 1238, 2258, 1578, 1290, 2450, 1650, 1558, 1348, 2045, 1800],
+    [1250, 1235, 1250, 1235, 1238, 1290, 2450, 1650, 1558, 2450, 1650, 1558],
+    [1250, 1235, 1238, 2258, 1578, 1290, 2450, 1650, 1558, 1250, 1235, 1238],
+    [1250, 1235, 1238, 2258, 1578, 1290, 2450, 1250, 1235, 1238, 1000, 2345],
+    [1250, 1235, 1238, 2258, 1250, 1235, 1238, 1650, 1558, 1348, 2045, 2135],
+    [1250, 1235, 1238, 2258, 1578, 1290, 2450, 1650, 1558, 1348, 2045, 1000],
+    [2450, 1650, 1558, 1235, 1238, 1290, 2450, 1650, 1558, 1348, 2045, 2314]
   ];
   public lineChartData: ChartDataSets[] = [
-    { data: this.chartData[0], fill: false,},
+    { data: this.chartData[0], fill: false, },
   ];
- 
+
   public lineChartLabels: Label[] = this.date;
   public lineChartOptions = {
     legend: {
@@ -31,7 +31,7 @@ export class DepotubersichtComponent implements OnInit {
   },
   tooltips: {
       callbacks: {
-         label: function(tooltipItem) {
+         label(tooltipItem) {
                 return tooltipItem.yLabel;
          }
       }
@@ -40,8 +40,8 @@ export class DepotubersichtComponent implements OnInit {
       // We use this empty structure as a placeholder for dynamic theming.
       xAxes: [{
         ticks: {
-        autoSkip:true,
-        maxTicksLimit:6
+        autoSkip: true,
+        maxTicksLimit: 6
         },
         gridLines: {
           display: false,
@@ -50,7 +50,7 @@ export class DepotubersichtComponent implements OnInit {
            yAxes: [
         {
           id: 'y-axis-0',
-          position: 'left',     
+          position: 'left',
         }
       ]
     },
@@ -83,14 +83,14 @@ export class DepotubersichtComponent implements OnInit {
   public lineChartPlugins = [];
 
   @ViewChild(BaseChartDirective, { static: true }) chart: BaseChartDirective;
-  
+
 
   constructor() { }
 
   ngOnInit(): void {
-  };
-  
-  chartDataHandler = (id) =>{
-    this.lineChartData[0].data=id;
+  }
+
+  chartDataHandler = (id) => {
+    this.lineChartData[0].data = id;
   }
 }
