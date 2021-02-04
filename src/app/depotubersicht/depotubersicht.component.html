@@ -1,5 +1,5 @@
 <div class="depotub">
-<div style="display: block;">
+<div style="display: block;" class="canvas">
     <canvas baseChart width="1200px" height="800px"
                 [datasets]="lineChartData"
                 [labels]="lineChartLabels"
@@ -10,6 +10,7 @@
                 [plugins]="lineChartPlugins"
                ></canvas>
     </div>
+    <div class ="wrapper">
 <div class="general-info">
     <div class="general-info__global">
             <div class="depot">
@@ -39,7 +40,7 @@
     <div class="investments-container__item" *ngFor="let list of chartData">
         <div class="investments-container__item-name" (click)="chartDataHandler(list)">
             <h4>Continental AG</h4>
-            <p>10 STck</p>
+            <p>10 Stck</p>
         </div>
         <div class="investments-container__item-info">
             <div class="investments-container__item-value">
@@ -51,10 +52,12 @@
                 <p class="item-percentage__add">+0.23%</p>
             </div>
             <div class="investments-container__item-arrow" [routerLink]="['/depotubersicht-info']">
+            <!-- Якщо я не правильно зрозумів і тут маб бути якісь мокові дані а не заглушка, то для перехода на деталі я б передавав
+                передавав дані через querry параметри) -->
                 >
             </div>
         </div>
     </div>
     
 
-</div></div>
+</div></div></div>

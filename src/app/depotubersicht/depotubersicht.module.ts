@@ -11,6 +11,6 @@ const routes: Routes = [{ path: '', component: DepotubersichtComponent }];
     declarations: [
         DepotubersichtComponent
     ],
-imports: [CommonModule,ChartsModule, RouterModule.forChild(routes)],
+imports: [CommonModule, ChartsModule, RouterModule.forChild(routes)],
 })
 export class DepotubersichtModule {}
